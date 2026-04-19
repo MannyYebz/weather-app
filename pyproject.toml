@@ -1,13 +1,17 @@
 [project]
 name = "weather-app-mannyyebz"
-version = "0.1.4"
-description = "Add your description here"
+version = "0.1.9"
+description = "A Python package for fetching real-time weather data using the OpenWeatherMap API"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "python-dotenv>=1.2.2",
     "requests>=2.33.1",
 ]
+
+[project.scripts]
+weather-app = "weather_app.client:main"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/weather_app"]
 

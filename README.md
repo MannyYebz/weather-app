@@ -1,50 +1,43 @@
-# How to Install
-# How to run
-# How to integrate API_key
+# 🌤️ Weather App
 
-# Weather App 🌤️
+**A production-ready Python CLI for real-time weather data**  
+Clean architecture • PyPI package • CLI tool
 
-A Python package for fetching real-time weather data using the OpenWeatherMap API.
+![PyPI](https://img.shields.io/pypi/v/weather-app-mannyyebz)
+![Python](https://img.shields.io/pypi/pyversions/weather-app-mannyyebz)
+![GitHub Stars](https://img.shields.io/github/stars/mannyyebz/weather-app)
+![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 
-## Installation
+---
+
+## 🚀 Installation
 
 ```bash
 pip install weather-app-mannyyebz
 ```
 
-## Setup
+## 🔑 How to Integrate API Key
 
-1. Get a free API key from [openweathermap.org](https://openweathermap.org)
-2. Create a `.env` file in your project:
-
-
-
-## Usage
-
-```python
-from weather_app import OpenWeatherMap
-
-# Get weather for a city
-client = OpenWeatherMap(api_key="your_api_key")
-data = client.get_weather("New York")
-print(data)
-
-# Convert Celsius to Fahrenheit
-temp_f = OpenWeatherMap.celsius_to_fahrenheit(25)
-print(f"25°C is {temp_f}°F")
+```bash
+cp .env
+# Add your OpenWeatherMap API key to .env
+WEATHER_API_KEY=your_key_here
 ```
 
-## Features
+## ▶️ How to Run
 
-- Fetch real-time weather data for any city
-- Returns temperature, humidity, wind speed, and more
-- Built-in Celsius to Fahrenheit converter
+```bash
+weather-app Tokyo
+```
 
-## Dependencies
+## 📁 Project Structure
 
-- `requests`
-- `python-dotenv`
-
-## License
-
-MIT
+```
+weather-app/
+├── src/
+│   └── weather_app/
+│       ├── __init__.py
+│       └── client.py
+├── README.md
+└── pyproject.toml
+```
